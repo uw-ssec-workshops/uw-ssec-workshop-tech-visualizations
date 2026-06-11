@@ -1,0 +1,19 @@
+{
+  "name": "ssec-workshop-visualizations",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cytoscape": "^3.31.2"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.21.9",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

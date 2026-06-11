@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSEC Workshop Visualizations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800&family=Encode+Sans+Compressed:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <h1>UW-SSEC Workshops</h1>
+      </header>
+      <section class="graph-panel" aria-label="Workshop relationship graph">
+        <div id="graph"></div>
+      </section>
+      <footer class="legend-panel" aria-label="Graph legend">
+        <div class="legend">
+          <section class="legend-column" aria-labelledby="node-legend-title">
+            <h2 id="node-legend-title">Nodes</h2>
+            <span><i class="legend-node github"></i>GitHub</span>
+            <span><i class="legend-node huggingface"></i>Hugging Face</span>
+            <span><i class="legend-node llm"></i>LiteLLM / LLM providers</span>
+            <span><i class="legend-node storage"></i>Storage</span>
+            <span><i class="legend-node actor"></i>Actors</span>
+            <span><i class="legend-node linked"></i>Clickable resource</span>
+          </section>
+          <section class="legend-column" aria-labelledby="edge-legend-title">
+            <h2 id="edge-legend-title">Edges</h2>
+            <span><i class="legend-edge setup"></i>setup / config</span>
+            <span><i class="legend-edge contains"></i>contains</span>
+            <span><i class="legend-edge checks"></i>membership check</span>
+            <span><i class="legend-edge provisions"></i>participant provisioning</span>
+            <span><i class="legend-edge stores"></i>secrets / storage</span>
+            <span><i class="legend-edge routes"></i>model routing</span>
+            <span><i class="legend-edge logs"></i>logging</span>
+          </section>
+        </div>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

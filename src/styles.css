@@ -1,0 +1,223 @@
+:root {
+  --ssec-purple-950: #1a0038;
+  --ssec-purple-900: #32006e;
+  --ssec-purple-700: #4b2e83;
+  --ssec-purple-500: #6b4fa6;
+  --ssec-purple-100: #e0d7f0;
+  --ssec-purple-50: #f0ecf7;
+  --ssec-gold-500: #b7a57a;
+  --ssec-gold-100: #f2efe6;
+  --ssec-teal-500: #2ad2c9;
+  --ssec-teal-100: #e6faf9;
+  --ssec-neutral-900: #1a1d1f;
+  --ssec-neutral-700: #373a3c;
+  --ssec-neutral-100: #eceef0;
+  color: var(--ssec-neutral-900);
+  background: #ffffff;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    linear-gradient(180deg, rgba(75, 46, 131, 0.08), transparent 420px),
+    linear-gradient(135deg, rgba(42, 210, 201, 0.08), transparent 38%),
+    #ffffff;
+}
+
+.page-header {
+  display: grid;
+  width: min(1500px, 100%);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  color: var(--ssec-purple-950);
+  font-family: "Encode Sans", "Open Sans", sans-serif;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.graph-panel {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+}
+
+#graph {
+  width: 100%;
+  height: 82vh;
+  min-height: 860px;
+  border: 2px solid rgba(75, 46, 131, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(75, 46, 131, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 46, 131, 0.035) 1px, transparent 1px),
+    #ffffff;
+  background-size: 32px 32px;
+  box-shadow: 0 18px 52px rgba(26, 0, 56, 0.12);
+}
+
+#graph.is-link-hovered {
+  cursor: pointer;
+}
+
+.legend-panel {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legend-column {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 2px solid rgba(75, 46, 131, 0.2);
+}
+
+.legend-column h2 {
+  margin: 0 0 2px;
+  color: var(--ssec-purple-700);
+  font-family: "Encode Sans Compressed", "Encode Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-node,
+.legend-edge {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.legend-node {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--ssec-purple-700);
+  border-radius: 50%;
+}
+
+.legend-node.github {
+  background: var(--ssec-purple-100);
+  border-color: var(--ssec-purple-700);
+  border-radius: 5px;
+}
+
+.legend-node.huggingface {
+  background: var(--ssec-gold-100);
+  border-color: var(--ssec-gold-500);
+  border-radius: 5px;
+}
+
+.legend-node.llm {
+  background: var(--ssec-teal-100);
+  border-color: var(--ssec-teal-500);
+  transform: rotate(45deg) scale(0.8);
+}
+
+.legend-node.storage {
+  background: #ffffff;
+  border-color: var(--ssec-purple-500);
+  border-radius: 50% / 28%;
+}
+
+.legend-node.actor {
+  background: #ffffff;
+  border-color: var(--ssec-gold-500);
+}
+
+.legend-node.linked {
+  background: #ffffff;
+  border-width: 4px;
+  border-radius: 5px;
+}
+
+.legend-edge {
+  width: 28px;
+  border-top: 3px solid #2d3944;
+}
+
+.legend-edge.setup {
+  border-color: var(--ssec-purple-500);
+}
+
+.legend-edge.contains {
+  border-top-style: dashed;
+  border-color: var(--ssec-purple-700);
+}
+
+.legend-edge.checks {
+  border-color: var(--ssec-gold-500);
+}
+
+.legend-edge.provisions {
+  border-color: var(--ssec-purple-900);
+}
+
+.legend-edge.stores {
+  border-top-style: dotted;
+  border-color: var(--ssec-purple-500);
+}
+
+.legend-edge.routes {
+  border-color: var(--ssec-teal-500);
+}
+
+.legend-edge.logs {
+  border-top-style: dashed;
+  border-color: var(--ssec-purple-700);
+}
+
+@media (max-width: 780px) {
+  .app-shell {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #graph {
+    height: 76vh;
+    min-height: 720px;
+  }
+
+  .legend {
+    grid-template-columns: 1fr;
+  }
+}
