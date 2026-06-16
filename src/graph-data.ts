@@ -47,7 +47,13 @@ export const nodes: GraphNode[] = [
     parent: "admin-setup",
     url: "https://github.com/schmidt-sciences/viss-agentic-ai-workshop-iss-2026",
   },
-  { id: "iss-team", label: "ISS GitHub Team", kind: "github", parent: "admin-setup" },
+  {
+    id: "iss-team",
+    label: "ISS GitHub Team",
+    kind: "github",
+    parent: "admin-setup",
+    url: "https://github.com/orgs/schmidt-sciences/teams/2026-viss-ai-workshop-participants",
+  },
   {
     id: "iss-onboard-public",
     label: "ISS Onboarding Service Public",
@@ -76,7 +82,13 @@ export const nodes: GraphNode[] = [
     parent: "admin-setup",
     url: "https://github.com/uw-ssec-workshops/coding-with-agents-workshop",
   },
-  { id: "june-team", label: "June 17 GitHub Team", kind: "github", parent: "admin-setup" },
+  {
+    id: "june-team",
+    label: "June 17 GitHub Team",
+    kind: "github",
+    parent: "admin-setup",
+    url: "https://github.com/orgs/uw-ssec-workshops/teams/coding-agent-workshop",
+  },
   {
     id: "june-onboard-public",
     label: "June 17 Onboarding Service Public",
@@ -151,6 +163,7 @@ export const edges: GraphEdge[] = [
   { id: "june-service-checks-team", source: "june-onboard-public", target: "june-team", kind: "checks", label: "checks" },
   { id: "june-service-configures-litellm", source: "june-onboard-public", target: "litellm-gateway", kind: "configures", label: "configures" },
   { id: "uw-org-contains-fork", source: "uw-fork-org", target: "uw-fork-repo", kind: "contains", label: "contains" },
+  { id: "uw-org-to-iss-repo", source: "uw-fork-org", target: "iss-repo", kind: "connected_to", label: "working org" },
   { id: "iss-repo-forked-from-uw", source: "uw-fork-repo", target: "iss-repo", kind: "connected_to", label: "work of UW-SSEC repo" },
   { id: "june-repo-derived-from-uw", source: "uw-fork-repo", target: "june-repo", kind: "connected_to", label: "work of UW-SSEC repo" },
   { id: "litellm-to-azure", source: "litellm-gateway", target: "azure-foundry", kind: "routes_to", label: "routes_to" },
