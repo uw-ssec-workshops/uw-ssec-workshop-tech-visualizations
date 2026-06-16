@@ -1,0 +1,18 @@
+# UW-SSEC Workshop Tech Visualizations
+
+1. [ISS Workshop Org](https://github.com/schmidt-sciences)
+2. [ISS Workshop Repo](https://github.com/schmidt-sciences/viss-agentic-ai-workshop-iss-2026)
+3. [ISS GitHub Team](https://github.com/orgs/schmidt-sciences/teams/2026-viss-ai-workshop-participants)
+4. [ISS Onboarding Service Public](https://uw-ssec-onboard-service-iss.hf.space/)
+5. [ISS Onboarding Service Management](https://huggingface.co/spaces/uw-ssec/onboard-service-iss)
+6. [June 17 Workshop Org](https://github.com/uw-ssec-workshops)
+7. [June 17 Workshop Repo](https://github.com/uw-ssec-workshops/coding-with-agents-workshop)
+8. [June 17 GitHub Team](https://github.com/orgs/uw-ssec-workshops/teams/coding-agent-workshop)
+9. [June 17 Onboarding Service Public](https://uw-ssec-onboard-service-iss-dryrun.hf.space/)
+10. [June 17 Onboarding Service Management](https://huggingface.co/spaces/uw-ssec/onboard-service-iss-dryrun)
+11. [UW-SSEC Working Fork Org](https://github.com/uw-ssec/)
+12. [UW-SSEC Workshop Forking Repo](https://github.com/uw-ssec/viss-agentic-ai-workshop-iss-2026)
+13. [LiteLLM Gateway](https://llmaven-iss-prod-litellm-prod.gentlebay-de6eef95.westus2.azurecontainerapps.io/)
+14. [Azure Foundry](https://ai.azure.com/foundryProject/overview?wsid=/subscriptions/d96a6573-baaf-43fd-873e-bb885bf3f437/resourceGroups/rg-llmaven-iss-westus2/providers/Microsoft.CognitiveServices/accounts/carlo-mpyc8w29-eastus2/projects/carlo-mpyc8w29-eastus2_project&tid=f6b6dd5b-f02f-441a-99a0-162ac5060bd2)
+15. [Codespaces](https://github.com/codespaces)
+16. [Codespace Secrets](https://github.com/settings/codespaces)
